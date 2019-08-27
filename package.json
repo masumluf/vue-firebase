@@ -1,0 +1,28 @@
+{
+  "name": "vuenfirebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masumluf/vue-firebase.git"
+  },
+  "keywords": [
+    "an",
+    "Ecommerce",
+    "site",
+    "using",
+    "vuejs",
+    "and",
+    "Firebase"
+  ],
+  "author": "Masum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masumluf/vue-firebase/issues"
+  },
+  "homepage": "https://github.com/masumluf/vue-firebase#readme"
+}
