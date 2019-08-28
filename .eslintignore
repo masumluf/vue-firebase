@@ -1,0 +1,7 @@
+/build/
+/config/
+/dist/
+/components/
+/src/
+/* eslint-disable */ 
+/* eslint-disable no-alert, no-console */
