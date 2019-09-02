@@ -91,31 +91,12 @@
                 </ul>
               </div>
             </li>
-            <li class="sidebar-dropdown">
-              <a href="#">
-                <i class="far fa-gem"></i>
-                <span class="menu-text">Components</span>
+            <router-link to="/admin/products" tag="li">
+              <a>
+                <i class="fa fa-chart-line"></i>
+                <span class="menu-text">Products</span>
               </a>
-              <div class="sidebar-submenu">
-                <ul>
-                  <li>
-                    <a href="#">General</a>
-                  </li>
-                  <li>
-                    <a href="#">Panels</a>
-                  </li>
-                  <li>
-                    <a href="#">Tables</a>
-                  </li>
-                  <li>
-                    <a href="#">Icons</a>
-                  </li>
-                  <li>
-                    <a href="#">Forms</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
+            </router-link>
             <router-link to="/admin/over" tag="li">
               <a>
                 <i class="fa fa-chart-line"></i>

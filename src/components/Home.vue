@@ -1,6 +1,7 @@
 <template>
-  <div class="container">
+  <div>
     <Nav></Nav>
+    <div class="container"></div>
   </div>
 </template>
 

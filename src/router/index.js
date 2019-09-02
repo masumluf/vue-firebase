@@ -5,6 +5,7 @@ import About from '../components/front-view/About.vue'
 import Items from '../components/front-view/Items.vue'
 import Admin from '../components/admin/Admin.vue'
 import Overview from '../components/admin/Overview.vue'
+import Products from '../components/admin/Product.vue'
 import {
   fb
 } from '../firebase'
@@ -33,9 +34,14 @@ export const router = new Router({
         requiresAuth: true
       },
       children: [{
-        path: 'over',
-        component: Overview
-      }]
+          path: 'over',
+          component: Overview
+        },
+        {
+          path: 'products',
+          component: Products
+        }
+      ]
     }
   ]
 })

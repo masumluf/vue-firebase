@@ -14,6 +14,18 @@ import popper from 'popper.js'
 import {
   fb
 } from './firebase'
+import VueFirestore from 'vue-firestore'
+import Swal from 'sweetalert2'
+window.Swal = Swal
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000
+})
+
+window.Toast = Toast
+Vue.use(VueFirestore)
 window.$ = window.jquery = jquery
 
 Vue.component('Nav', require('./components/front-view/Nav.vue').default)
