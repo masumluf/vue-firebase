@@ -51,11 +51,7 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Product Descripton</label>
-                  <textarea
-                    class="form-control"
-                    aria-label="With textarea"
-                    v-model="product.description"
-                  ></textarea>
+                  <vue-editor v-model="product.description"></vue-editor>
                 </div>
               </div>
               <div class="col-sm-3">
@@ -73,9 +69,15 @@
                   <input
                     type="text"
                     placeholder="Product Price"
-                    v-model="product.tag"
+                    v-model="tag"
                     class="form-control"
+                    @keyup.188="addTag"
                   />
+                </div>
+                <div class="form-group d-flex">
+                  <p v-for="tag in product.tags" class="p-1">
+                    <span class="btn btn-secondary">{{tag.replace(/,/g,"")}}</span>
+                  </p>
                 </div>
                 <div class="form-group">
                   <input
@@ -117,6 +119,7 @@
 
 <script>
 import { fb, db } from '../../firebase'
+import { VueEditor } from "vue2-editor";
 export default {
   data() {
     return {
@@ -124,13 +127,17 @@ export default {
       product: {
         name: null,
         price: null,
-        tag: null,
+        tags: [],
         description: null,
         image: null
       },
+      tag: null,
       get_id: null,
       condition: null
     }
+  },
+  components: {
+    VueEditor
   },
   firestore() {
     return {
@@ -205,6 +212,10 @@ export default {
     },
     closeBox() {
       this.reset()
+    },
+    addTag() {
+      this.product.tags.push(this.tag)
+      this.tag = ''
     }
   },
   created() {
